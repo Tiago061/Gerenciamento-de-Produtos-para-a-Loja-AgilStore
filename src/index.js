@@ -69,3 +69,28 @@ function buscar() {
     console.log(chalk.red('Opção inválida.'));
   }
 }
+
+function atualizar() {
+  try {
+    const id = prompt('Informe o ID do produto: ');
+
+    const nome = prompt('Novo nome (Enter para manter): ');
+    const categoria = prompt('Nova categoria (Enter para manter): ');
+    const quantidadeInput = prompt('Nova quantidade (Enter para manter): ');
+    const precoInput = prompt('Novo preço (Enter para manter): ');
+
+    const novosDados = {};
+
+    if (nome) novosDados.nome = nome;
+    if (categoria) novosDados.categoria = categoria;
+    if (quantidadeInput) novosDados.quantidade = Number(quantidadeInput);
+    if (precoInput) novosDados.preco = Number(precoInput);
+
+    const produtoAtualizado = atualizarProduto(id, novosDados);
+
+    console.log(chalk.green('\nProduto atualizado com sucesso!'));
+    console.table([produtoAtualizado]);
+  } catch (error) {
+    console.log(chalk.red(`Erro: ${error.message}`));
+  }
+}
