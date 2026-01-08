@@ -1,0 +1,16 @@
+[
+  {
+    "id": "573770b0-2204-4779-9553-94cc9a619c5b",
+    "nome": "Iphone 14",
+    "categoria": "Smartphone",
+    "quantidade": 10,
+    "preco": 9000
+  },
+  {
+    "id": "a9d55f43-1d3a-42f2-8176-fd12f22bbfa7",
+    "nome": "AppleWatch",
+    "categoria": "SmartWatch",
+    "quantidade": 7,
+    "preco": 3000
+  }
+]
