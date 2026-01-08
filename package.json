@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Tiago061/Gerenciamento-de-Produtos-para-a-Loja-AgilStore#readme",
   "dependencies": {
+    "chalk": "^5.6.2",
     "prompt-sync": "^4.2.0",
     "uuid": "^13.0.0"
   }
