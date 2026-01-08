@@ -41,3 +41,31 @@ function listar() {
 
   console.table(produtos);
 }
+
+function buscar() {
+  const opcao = prompt('Buscar por (1 - ID | 2 - Nome): ');
+
+  if (opcao === '1') {
+    const id = prompt('Informe o ID: ');
+    const produto = buscarProdutoPorId(id);
+
+    if (!produto) {
+      console.log(chalk.yellow('Produto não encontrado.'));
+      return;
+    }
+
+    console.table([produto]);
+  } else if (opcao === '2') {
+    const nome = prompt('Informe parte do nome: ');
+    const produtos = buscarProdutoPorNome(nome);
+
+    if (produtos.length === 0) {
+      console.log(chalk.yellow('Nenhum produto encontrado.'));
+      return;
+    }
+
+    console.table(produtos);
+  } else {
+    console.log(chalk.red('Opção inválida.'));
+  }
+}
