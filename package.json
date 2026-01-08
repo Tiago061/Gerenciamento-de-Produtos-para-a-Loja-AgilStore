@@ -1,0 +1,25 @@
+{
+  "name": "gerenciamento-de-produtos-para-a-loja-agilstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tiago061/Gerenciamento-de-Produtos-para-a-Loja-AgilStore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tiago061/Gerenciamento-de-Produtos-para-a-Loja-AgilStore/issues"
+  },
+  "homepage": "https://github.com/Tiago061/Gerenciamento-de-Produtos-para-a-Loja-AgilStore#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "uuid": "^13.0.0"
+  }
+}
