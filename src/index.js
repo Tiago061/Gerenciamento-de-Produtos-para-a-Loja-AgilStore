@@ -24,10 +24,10 @@ const prompt = promptSync({ sigint: true });
 
 function adicionar(){
     try{
-        const nome = prompt('Nome do Produto')
-        const categoria = prompt('Categoria do Produto')
-        const quantidade = prompt('Quantidade do Produto')
-        const preco = prompt('Preço do Produto')
+        const nome = prompt('Nome do Produto: ')
+        const categoria = prompt('Categoria do Produto: ')
+        const quantidade = prompt('Quantidade do Produto: ')
+        const preco = prompt('Preço do Produto: ')
 
         const produto = adicionarProduto({nome, categoria, quantidade, preco})
         console.log(chalk.green('\nProduto adicionado com sucesso!'))
