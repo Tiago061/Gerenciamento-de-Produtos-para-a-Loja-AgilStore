@@ -1,9 +1,9 @@
-import { loadData, saveData } from '../utils/fileHandler'
-import {uuidv4} from 'uuid'
+import { loadData, saveData } from '../utils/fileHandler.js'
+import { v4 as uuidv4 } from 'uuid';
 
 let produtos = loadData()
 
-export default function addProduto({nome, categoria, quantidade, preco}) {
+export function adicionarProduto({nome, categoria, quantidade, preco}) {
     if(!nome || !categoria){
         throw new Error('Nome e categoria são obrigatórios.')
     }
@@ -30,7 +30,7 @@ export default function addProduto({nome, categoria, quantidade, preco}) {
     return novoProduto
 }
 
-export default function listarProdutos({ categoria, ordernarPor } = {}){
+export function listarProdutos({ categoria, ordernarPor } = {}){
     let resultado = [...produtos]
 
     if(categoria){
@@ -51,13 +51,17 @@ export default function listarProdutos({ categoria, ordernarPor } = {}){
     return resultado
 }
 
-export default function buscarProdutoPorNome(nome){
+function buscarProdutoPorId(id) {
+  return produtos.find(p => p.id === id);
+}
+
+export function buscarProdutoPorNome(nome){
     return produtos.filter(p =>
         p.nome.toLowerCase().includes(nome.toLowerCase())
     )
 }
 
-export default function atualizarProduto(id, novosDados){
+export function atualizarProduto(id, novosDados){
     const index = produtos.findIndex(p => p.id === id)
 
     if(index === -1){
@@ -89,7 +93,7 @@ export default function atualizarProduto(id, novosDados){
     return produtos[index]
 }
 
-export default function removerProduto(id){
+export function removerProduto(id){
     const index = produtos.findIndex(p => p.id === id)
 
     if(index === -1){
