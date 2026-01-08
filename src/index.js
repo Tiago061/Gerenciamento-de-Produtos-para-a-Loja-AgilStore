@@ -1,4 +1,14 @@
 import chalk from "chalk";
+import promptSync from 'prompt-sync';
+import {
+  adicionarProduto,
+  listarProdutos,
+  buscarProdutoPorId,
+  buscarProdutoPorNome,
+  atualizarProduto,
+  removerProduto
+} from './services/inventoryService.js';
+
 
 function mostrarMenu(){
   console.log(chalk.blue('\n=== AgilStore | Controle de Inventário ==='));
@@ -9,6 +19,8 @@ function mostrarMenu(){
   console.log('5 - Remover produto');
   console.log('0 - Sair'); 
 }
+
+const prompt = promptSync({ sigint: true });
 
 function adicionar(){
     try{
@@ -39,7 +51,15 @@ function listar() {
     return;
   }
 
-  console.table(produtos);
+  console.table(
+    produtos.map(p => ({
+        ID: p.id,
+        Produto: p.nome,
+        Categoria: p.categoria,
+        Quantidade: p.qtd,
+        Preço: `R$ ${p.preco.toFixed(2)}`
+    }))
+  );
 }
 
 function buscar() {
