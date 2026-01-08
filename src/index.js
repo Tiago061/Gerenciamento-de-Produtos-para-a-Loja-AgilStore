@@ -94,3 +94,21 @@ function atualizar() {
     console.log(chalk.red(`Erro: ${error.message}`));
   }
 }
+
+function remover() {
+  try {
+    const id = prompt('Informe o ID do produto: ');
+    const confirmacao = prompt('Tem certeza que deseja remover? (s/n): ');
+
+    if (confirmacao.toLowerCase() !== 's') {
+      console.log(chalk.yellow('Operação cancelada.'));
+      return;
+    }
+
+    const produtoRemovido = removerProduto(id);
+    console.log(chalk.green('\nProduto removido com sucesso!'));
+    console.table([produtoRemovido]);
+  } catch (error) {
+    console.log(chalk.red(`Erro: ${error.message}`));
+  }
+}
