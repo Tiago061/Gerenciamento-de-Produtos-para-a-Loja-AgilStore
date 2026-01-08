@@ -1,5 +1,5 @@
 import path from 'path';
-import fs from 'fs/promises';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -9,6 +9,7 @@ const filePath = path.join(__dirname, '../data/produtos.json');
 
 export function saveData(data){
     try{
+        console.log('📁 Salvando em:', filePath);
         fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
     }catch(error){
         console.error('Erro ao salvar os dados:', error.message)
