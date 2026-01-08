@@ -51,7 +51,7 @@ export function listarProdutos({ categoria, ordernarPor } = {}){
     return resultado
 }
 
-function buscarProdutoPorId(id) {
+export function buscarProdutoPorId(id) {
   return produtos.find(p => p.id === id);
 }
 
