@@ -56,7 +56,7 @@ function listar() {
         ID: p.id,
         Produto: p.nome,
         Categoria: p.categoria,
-        Quantidade: p.qtd,
+        Quantidade: p.quantidade,
         Preço: `R$ ${p.preco.toFixed(2)}`
     }))
   );
