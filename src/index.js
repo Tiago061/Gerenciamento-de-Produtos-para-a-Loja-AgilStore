@@ -112,3 +112,33 @@ function remover() {
     console.log(chalk.red(`Erro: ${error.message}`));
   }
 }
+
+let opcao;
+
+do {
+  mostrarMenu();
+  opcao = prompt('\nEscolha uma opção: ');
+
+  switch (opcao) {
+    case '1':
+      adicionar();
+      break;
+    case '2':
+      listar();
+      break;
+    case '3':
+      buscar();
+      break;
+    case '4':
+      atualizar();
+      break;
+    case '5':
+      remover();
+      break;
+    case '0':
+      console.log(chalk.blue('\nEncerrando aplicação...'));
+      break;
+    default:
+      console.log(chalk.red('Opção inválida.'));
+  }
+} while (opcao !== '0');
