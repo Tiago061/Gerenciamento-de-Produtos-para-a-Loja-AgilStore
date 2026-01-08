@@ -1,0 +1,30 @@
+[
+  {
+    "id": "a1f3c9b2-7e42-4f5d-9d18-8a21f7c1a001",
+    "nome": "Smartphone Samsung Galaxy A54",
+    "categoria": "Smartphones",
+    "quantidade": 15,
+    "preco": 1899.90
+  },
+  {
+    "id": "b7e21a4d-91c3-4f88-8a22-1e9a3f5b1023",
+    "nome": "Notebook Dell Inspiron 15",
+    "categoria": "Notebooks",
+    "quantidade": 8,
+    "preco": 3499.00
+  },
+  {
+    "id": "c9f5a12e-5b67-41d4-9f01-7e8b2a331234",
+    "nome": "Fone de Ouvido Bluetooth JBL",
+    "categoria": "Acessórios",
+    "quantidade": 25,
+    "preco": 299.90
+  },
+  {
+    "id": "d4e8b921-2a56-43a2-8c01-9a7f3b004567",
+    "nome": "Carregador USB-C 20W",
+    "categoria": "Acessórios",
+    "quantidade": 40,
+    "preco": 79.90
+  }
+]
